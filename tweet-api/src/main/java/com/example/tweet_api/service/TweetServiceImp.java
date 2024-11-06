@@ -28,4 +28,14 @@ public class TweetServiceImp implements TweetService{
     public void addTweet(Tweet tweet) {
         tweetRepo.save(tweet);
     }
+
+    @Override
+    public Tweet findById(Long id) {
+        return tweetRepo.findById(id).get();
+    }
+
+    @Override
+    public List<Tweet> findByUsername(String string) {
+        return List.of();
+    }
 }

@@ -8,4 +8,6 @@ public interface TweetService {
 
     List<Tweet> getAllTweets();
     void addTweet(Tweet tweet);
+    Tweet findById(Long id);
+    List<Tweet> findByUsername(String string);
 }

@@ -4,9 +4,8 @@ package com.example.tweet_api.controller;
 import com.example.tweet_api.entity.Tweet;
 import com.example.tweet_api.service.TweetService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import  java.util.*;
 @RestController
 @RequestMapping("api")
@@ -22,6 +21,11 @@ public class TweetController {
     @GetMapping("/tweets")
     public List<Tweet> GetTweets(){
         return tweetService.getAllTweets();
+    }
+
+    @PostMapping("/add")
+    public void PostTweet(@RequestBody Tweet tweet){
+        tweetService.addTweet(tweet);
     }
 
 }
