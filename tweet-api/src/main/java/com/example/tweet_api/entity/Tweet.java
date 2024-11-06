@@ -17,7 +17,6 @@ import java.util.Date;
 @Builder
 @Table(name = "tweets")
 public class Tweet {
-
     @Id
     @SequenceGenerator(
             name = "tweet_sequence",
@@ -26,11 +25,9 @@ public class Tweet {
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
             generator = "tweet_sequence")
-
     private Long tweetId;
     private String user;
     private String content;
     @CreationTimestamp
     private LocalDate createdOn;
-
 }

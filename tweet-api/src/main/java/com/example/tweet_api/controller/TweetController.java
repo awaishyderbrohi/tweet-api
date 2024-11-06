@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import  java.util.*;
 @RestController
-@RequestMapping("/tweet/api/v1")
+@RequestMapping("api")
 public class TweetController {
 
     @Autowired
